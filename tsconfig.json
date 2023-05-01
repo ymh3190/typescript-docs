@@ -1,0 +1,14 @@
+{
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "target": "ES2021",
+    "lib": ["ES2021", "DOM"],
+    "outDir": "build",
+    "esModuleInterop": true,
+    "strict": true,
+    "noEmitOnError": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true
+  }
+}
