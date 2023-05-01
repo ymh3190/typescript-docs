@@ -1,6 +1,6 @@
 # typescript-docs
 
-- 플래시카드
+## 플래시카드
 
 1. types by inference
 2. defining types
