@@ -6,7 +6,7 @@ function padLeft(padding: number | string, input: string) {
 }
 
 function printAll(strs: string | string[] | null) {
-  if (typeof strs === "object") {
+  if (strs && typeof strs === "object") {
     // null is object type...
     for (const s of strs) {
       console.log(s);
@@ -14,5 +14,16 @@ function printAll(strs: string | string[] | null) {
   } else if (typeof strs === "string") {
     console.log(strs);
   } else {
+  }
+}
+
+function multiplyAll(
+  values: number[] | undefined,
+  factor: number
+): number[] | undefined {
+  if (!values) {
+    return values;
+  } else {
+    return values.map((x) => x * factor);
   }
 }
