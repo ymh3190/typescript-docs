@@ -61,3 +61,16 @@
 57. parameter destructuring
 58. destructuring assignment
 59. assignability of functions
+60. objects types
+61. optional properties
+62. readonly properties
+63. remove readonly attributes
+64. index signatures
+65. extending types
+66. intersection types
+67. generic object types
+68. generic object types2
+69. generic object types3
+70. creating types from types: types which takes parameters
+71. creating types from types: using class types in generics
+72. mixin design pattern
