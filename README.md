@@ -74,3 +74,29 @@
 70. creating types from types: types which takes parameters
 71. creating types from types: using class types in generics
 72. mixin design pattern
+73. 'keyof' type operator
+74. 'typeof' type operator
+75. indexed access types
+76. conditional types
+77. conditional type constraint
+78. constraint out
+79. inferring within conditional types
+80. distributive conditional types
+81. mapped types
+82. mapping modifier
+83. key remapping
+84. remove the 'kind' property
+85. template literal type
+86. string unions in types
+87. class fileds constructors
+88. super call methods
+89. getter setter(accessor... wow)
+90. inference rule for accessor
+91. class index signature
+92. class heritage implements clause
+93. extends cluases, overriding method
+94. declare
+95. initialization order
+96. inheriting built-in types
+97. member visibility
+98. private
