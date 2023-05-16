@@ -3,12 +3,13 @@
   "exclude": ["node_modules"],
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022"],
+    "lib": ["ES2022", "DOM"],
     "outDir": "build",
     "esModuleInterop": true,
     "strict": true,
     "noEmitOnError": true,
     "strictNullChecks": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "moduleResolution": "node"
   }
 }

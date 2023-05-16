@@ -100,3 +100,21 @@
 96. inheriting built-in types
 97. member visibility
 98. private
+99. static memebers
+100. special static names
+101. why no static classes?
+102. static blocks in classes
+103. generic classes
+104. type parameters in static members
+105. this at runtime in classes
+106. arrow functions
+107. trade-off
+108. this parameters
+109. the opposite trade-off of the arrow function approach
+110. this type
+111. this-based type guard
+112. parameter properties
+113. class expression
+114. abstract class & members
+115. abstract construct signature
+116. relationship between classes

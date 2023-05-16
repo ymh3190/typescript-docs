@@ -2,6 +2,7 @@
   "name": "typescript-docs",
   "version": "1.0.0",
   "scripts": {
+    "build": "tsc",
     "dev": "nodemon src/main.ts"
   },
   "license": "MIT",
