@@ -119,5 +119,4 @@
 115. abstract construct signature
 116. relationship between classes
 
-- js engine(event loop, call stack. message queue)
-- 프로토타입 정리하기
+- event loop, call stack, message queue
