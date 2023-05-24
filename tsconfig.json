@@ -3,8 +3,8 @@
   "exclude": ["node_modules"],
   "compilerOptions": {
     "esModuleInterop": true,
-    "strict": true,
-    "strictPropertyInitialization": true,
-    "outDir": "build"
+    "outDir": "build",
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true
   }
 }
