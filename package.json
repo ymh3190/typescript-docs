@@ -1,9 +1,10 @@
 {
   "name": "typescript-docs",
   "version": "1.0.0",
+  "description": "",
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon --exec ts-node src/main.ts"
+    "dev": "nodemon -x ts-node src/main.ts"
   },
   "license": "MIT",
   "devDependencies": {

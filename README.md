@@ -118,5 +118,19 @@
 114. abstract class & members
 115. abstract construct signature
 116. relationship between classes
+117. module
+118. Utility Types: Awaited<Type>
+119. Partial<Type>
+120. Required<Type>
+121. Readonly<Type>
+122. Record<Keys, Type>
+123. Pick<Type, Keys>
+124. Omit<Type, Keys>
+125. Exclude<UnionType, ExcludedMembers>
+126. Extract<Type, Union>
+127. NonNullable<Type>
+128. Parameters<Type>
+129. ReturnType<Type>
+130. InstanceType<Type>
 
 - event loop, call stack, message queue
