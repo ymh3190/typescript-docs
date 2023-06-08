@@ -132,5 +132,6 @@
 128. Parameters<Type>
 129. ReturnType<Type>
 130. InstanceType<Type>
+131. ThisParameterType<Type>
 
 - event loop, call stack, message queue
