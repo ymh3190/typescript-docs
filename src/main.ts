@@ -1,12 +1,10 @@
-const person = {
-  fullName: function () {
-    return this.firstName + " " + this.lastName;
-  },
-};
+function* foo(index: number) {
+  while (index < 2) {
+    yield index;
+    index++;
+  }
+}
 
-const person1 = {
-  firstName: "Mary",
-  lastName: "Doe",
-};
-
-console.log(person.fullName.apply(person1));
+const iter = foo(0);
+console.log(iter.next().value);
+console.log(iter.next().value);

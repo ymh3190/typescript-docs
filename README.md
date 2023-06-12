@@ -133,5 +133,10 @@
 129. ReturnType<Type>
 130. InstanceType<Type>
 131. ThisParameterType<Type>
+132. Function.prototype.call()
+133. Function.prototype.apply()
+134. Function.prototype.bind()
+135. yield & generator function
+136. prototype & __proto__
 
 - event loop, call stack, message queue
