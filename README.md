@@ -138,5 +138,8 @@
 134. Function.prototype.bind()
 135. yield & generator function
 136. prototype & __proto__
+137. OmitThisParameter<Type>
+138. ThisType<Type>
+139. Instrinsic String Manipulation Types: Uppercase<StringType>, Lowercase<StringType>, Capitalize<StringType>, Uncapitalize<StringType>
 
 - event loop, call stack, message queue
