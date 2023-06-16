@@ -141,5 +141,6 @@
 137. OmitThisParameter<Type>
 138. ThisType<Type>
 139. Instrinsic String Manipulation Types: Uppercase<StringType>, Lowercase<StringType>, Capitalize<StringType>, Uncapitalize<StringType>
+140. decorator
 
 - event loop, call stack, message queue

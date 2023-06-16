@@ -1,24 +1,61 @@
-type ObjectDescriptor<D, M> = {
-  data: D;
-  methods: M & ThisType<D & M>;
-};
+class BugReport {
+  type = "report";
+  title: string;
 
-function makeObject<D, M>(desc: ObjectDescriptor<D, M>): D & M {
-  let data: D = desc.data;
-  let methods: M = desc.methods;
-  return { ...data, ...methods } as D & M;
+  constructor(t: string) {
+    this.title = t;
+  }
+
+  @validate
+  print(@required verbose: boolean) {
+    if (verbose) {
+      return `type: ${this.type}\ntitle: ${this.title}`;
+    } else {
+      return this.title;
+    }
+  }
 }
 
-let obj = makeObject({
-  data: { x: 0, y: 0 },
-  methods: {
-    moveBy(dx: number, dy: number) {
-      this.x += dx;
-      this.y += dy;
-    },
-  },
-});
+import "reflect-metadata";
+const requiredMetadataKey = Symbol("required");
+function required(
+  target: Object,
+  propertyKey: string | symbol,
+  parameterIndex: number
+) {
+  let existingRequiredParameters: number[] =
+    Reflect.getOwnMetadata(requiredMetadataKey, target, propertyKey) || [];
+  existingRequiredParameters.push(parameterIndex);
+  Reflect.defineMetadata(
+    requiredMetadataKey,
+    existingRequiredParameters,
+    target,
+    propertyKey
+  );
+}
+function validate(
+  target: any,
+  propertyName: string,
+  descriptor: TypedPropertyDescriptor<Function>
+) {
+  let method = descriptor.value!;
 
-obj.x = 10;
-obj.y = 20;
-obj.moveBy(5, 5);
+  descriptor.value = function () {
+    let requiredParameters: number[] = Reflect.getOwnMetadata(
+      requiredMetadataKey,
+      target,
+      propertyName
+    );
+    if (requiredParameters) {
+      for (let parameterIndex of requiredParameters) {
+        if (
+          parameterIndex >= arguments.length ||
+          arguments[parameterIndex] === undefined
+        ) {
+          throw new Error("Missing required argument.");
+        }
+      }
+    }
+    return method.apply(this, arguments);
+  };
+}
